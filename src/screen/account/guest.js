@@ -7,25 +7,23 @@ import t from '@/src/locales/i18n';
 
 const Guest = ({ onNavigate }) => {
   return (
-    <Vstack>
+    <Vstack className='w-full p-4'>
         <Container>
             <Item
                 testID="items.contact"
-                lable={t('screen.contact.title')}
-                leftIcon={{name:'chatbuubles-outline', type:'ionicon'}}
+                label={t('screen.contact.title')}
+                leftIcon={{name:'chatbubbles-outline', type: Ionicons}}
                 onPress={() => onNavigate('Account', { screen: 'Contact' })}
             />
 
             <Item
-                testId="items.term"
-                lable={t('screen.term.title')}
+                testID="items.term"
+                label={t('screen.term.title')}
                 leftIcon={{name: 'bookmark-multiple-outline', type: MaterialIcons}}
                 isDivider={false}
                 onPress={() => onNavigate('Account', { screen: 'Term' })}
         </Container>
     </Vstack>
-
-  
   );
 };
 
