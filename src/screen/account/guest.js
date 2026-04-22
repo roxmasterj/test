@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Vstack } from 'tamagui'
-import Container from '../../components/container'
-import Item from '../../components/item'
+import React from 'react'     
 import t from '@/src/locales/i18n';
+import { VStack, Container, Item } from '../../components/core';
+import { Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Container, Item } from '@/src/components/account';
 
 const Guest = ({ onNavigate }) => {
   return (
-    <Vstack className='w-full p-4'>
+    <VStack className='w-full p-4'>
         <Container>
             <Item
                 testID="items.contact"
@@ -23,7 +24,7 @@ const Guest = ({ onNavigate }) => {
                 isDivider={false}
                 onPress={() => onNavigate('Account', { screen: 'Term' })}
         </Container>
-    </Vstack>
+    </VStack>
   );
 };
 
