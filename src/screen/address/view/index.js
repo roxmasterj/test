@@ -166,7 +166,7 @@ const AddressViewScreen = ({ navigation, route: { params } }) => {
                 isDisabled={submitting}
                 onPress={onsubmit}
                 >   
-                    {submitting && <ButtonSpiner />}
+                    {submitting && <ButtonSpinner />}
 
                     <ButtonText className={submitBtnStyle.text({})}>{t('dialog.save')}</ButtonText>
             </Button>
