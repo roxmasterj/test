@@ -23,6 +23,7 @@ const Guest = ({ onNavigate }) => {
                 leftIcon={{name: 'bookmark-multiple-outline', type: MaterialIcons}}
                 isDivider={false}
                 onPress={() => onNavigate('Account', { screen: 'Term' })}
+            />
         </Container>
     </VStack>
   );
