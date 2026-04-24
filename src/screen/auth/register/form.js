@@ -1,5 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { Text } from 'react-native';
+import { VStack, HStack, Input, DatePicker, Select, Select2, Button, ButtonSpinner, ButtonText } from '@/src/components/core';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { useSafeArea } from 'react-native-safe-area-context';
+import { useRegisterForm } from '@/src/hooks/useRegisterForm';
+import { useMemo } from 'react';
+import { containerStyle, scrollViewStyle, submitBtnStyle } from '@/src/styles';
+import Loading from '@/src/components/loading';
+import RegisterSuccessSheet from '@/src/components/register_success_sheet';
 
 const RegisterFormScreen = ({ navigation }) => {
     const insets = useSafeArea();
@@ -60,6 +68,28 @@ const RegisterFormScreen = ({ navigation }) => {
                                     label={t('forms.label.email')}
                                     keyboardType="email-address"
                                     placeholder={t('forms.label.email')}
+                                />
+
+                                <Input 
+                                    isRequired
+                                    isRawInput
+                                    name={formKeys.tel}
+                                    control={control}
+                                    formState={formState}
+                                    keyboardType="number-pad"
+                                    label={t('forms.label.tel')}
+                                    placeholder={t('forms.label.tel')}
+                                />
+
+                                <Input 
+                                    isRequired
+                                    name={formKeys.password}
+                                    control={control}
+                                    formState={formState}
+                                    type="password"
+                                    keyboardType="default"
+                                    label={t('forms.label.password')}
+                                      placeholder={t('forms.label.password')}
                                 />
 
                                 <Input 
